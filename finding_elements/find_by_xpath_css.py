@@ -4,7 +4,7 @@ from selenium import webdriver
 class FindByXpathCssName():
     def test(self):
         base_url = "https://letskodeit.teachable.com/p/practice"
-        driver = webdriver.Chrome()
+        driver = webdriver.Firefox()
         driver.get(base_url)
         element_by_xpath = driver.find_element_by_xpath("//input[@id='name']")
 
