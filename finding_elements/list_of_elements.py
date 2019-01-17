@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 class ListOfElements():
     def test(self):
         base_url = "https://letskodeit.teachable.com/p/practice"
-        driver = webdriver.Chrome()
+        driver = webdriver.Firefox()
         driver.get(base_url)
 
         element_list_by_classname = driver.find_elements_by_class_name("inputs")
