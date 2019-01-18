@@ -1,10 +1,9 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from utilities.handy_wrappers import HandyWrappers
-import time
 
 
-class UsingWrappers():
-
+class ElementPresentCheck():
     def test(self):
         base_url = "https://learn.letskodeit.com/p/practice"
         driver = webdriver.Firefox()
@@ -12,16 +11,14 @@ class UsingWrappers():
         driver.implicitly_wait(10)
 
         hw = HandyWrappers(driver)
-
         driver.get(base_url)
 
-        text_field1 = hw.find_elem("name")
-        text_field1.send_keys("Test")
-        time.sleep(2)
+        elem_result1 = hw.is_elem_present("name", By.ID)
+        print(str(elem_result1))
 
-        text_field2 = hw.find_elem("//input[@id='name']", locator_type="xpath")
-        text_field2.clear()
+        elem_result2 = hw.are_elems_present("//input[@id='name']", By.XPATH)
+        print(str(elem_result2))
 
 
-ff = UsingWrappers()
+ff = ElementPresentCheck()
 ff.test()
