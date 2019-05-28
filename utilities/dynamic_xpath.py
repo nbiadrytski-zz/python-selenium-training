@@ -16,8 +16,8 @@ class DynamicXpath():
         driver.find_element(By.ID, "user_password").send_keys("abcabc")
         driver.find_element(By.NAME, "commit").click()
 
-        # Search for courses
-        driver.find_element(By.ID, "search-courses").send_keys("JavaScript")
+        # Search for main
+        driver.find_element(By.ID, "search-main").send_keys("JavaScript")
         driver.find_element(By.ID, "search-course-button").click()
 
         # Select course
