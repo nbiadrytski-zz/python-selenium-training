@@ -1,9 +1,9 @@
-from utils.custom_logger import CustomLogger
+from utils.logger import Logger
 
 
-class Error(Exception, CustomLogger):
+class Error(Exception, Logger):
     def __init__(self, message):
-        CustomLogger.__init__(self.logger)
+        Logger.__init__(self.logger)
         self.message = message
 
     def __str__(self):

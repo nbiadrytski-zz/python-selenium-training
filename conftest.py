@@ -26,7 +26,7 @@ def get_driver(request):
 
 @pytest.fixture()
 def welcome_page(get_driver):
-    from pages.welcome.welcome_page import WelcomePage
+    from pages.welcome_page import WelcomePage
     wp = WelcomePage(get_driver)
     wp.navigate(BASE_URL)
     return wp

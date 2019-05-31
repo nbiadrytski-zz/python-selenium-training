@@ -1,7 +1,7 @@
 import logging
 
 
-class CustomLogger:
+class Logger:
 
     @property
     def logger(self):
